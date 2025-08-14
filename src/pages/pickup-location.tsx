@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const PickupLocation = () => {
   return (
     <div>
@@ -16,12 +18,14 @@ const PickupLocation = () => {
           <span className="text-xs font-semibold">Female</span>
         </div>
       </div>
-      <h6 className="text-center my-4">
-        <button className="bg-[#83E0C4] px-10 py-1 font-semibold rounded-lg">
-          {" "}
-          Next
-        </button>{" "}
-      </h6>
+      <Link to={"/searching-ride"}>
+        <h6 className="text-center my-4">
+          <button className="bg-[#83E0C4] px-10 py-1 font-semibold rounded-lg">
+            {" "}
+            Next
+          </button>{" "}
+        </h6>
+      </Link>
     </div>
   );
 };

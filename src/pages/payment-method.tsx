@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const PaymentMethod = () => {
   return (
     <div>
@@ -18,12 +20,14 @@ const PaymentMethod = () => {
           </div>
         </div>
       </div>
-      <h6 className="text-center my-6">
-        <button className="bg-black text-white px-10 py-2 font-semibold rounded-lg">
-          {" "}
-          Book Ride
-        </button>{" "}
-      </h6>
+      <Link to={"/pay-with-card"}>
+        <h6 className="text-center my-6">
+          <button className="bg-black text-white px-10 py-2 font-semibold rounded-lg">
+            {" "}
+            Book Ride
+          </button>{" "}
+        </h6>
+      </Link>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const Home = () => {
   ) => {
     try {
       setSuggestions([]); // Hide suggestions immediately
-      if (inputRef.current) inputRef.current.value = "";
+      if (inputRef.current) inputRef.current.blur();
 
       const res = await axios.get(
         "https://maps.gomaps.pro/maps/api/place/details/json",
@@ -55,7 +55,24 @@ const Home = () => {
         );
         setSuggestions(res.data.predictions || []);
       } catch (err) {
-        console.error("Error fetching autocomplete:", err);
+        if (axios.isAxiosError(err)) {
+          if (err.response) {
+            console.error(
+              "Error fetching autocomplete:",
+              err.response.data,
+              err.response.status
+            );
+          } else if (err.request) {
+            console.error(
+              "Error fetching autocomplete: No response received",
+              err.request
+            );
+          } else {
+            console.error("Error fetching autocomplete:", err.message);
+          }
+        } else {
+          console.error("Error fetching autocomplete:", err);
+        }
       }
     };
     fetchSuggestions();

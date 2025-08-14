@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const DriverFound = () => {
   return (
     <div>
@@ -21,9 +23,11 @@ const DriverFound = () => {
         </div>
         <img src="/material-symbols_call.png" alt="" />
       </div>
-      <h4 className="text-center font-semibold text-white my-4">
-        <button className="bg-black px-10 py-2 rounded-lg">Next</button>
-      </h4>
+      <Link to={"/payment-method"}>
+        <h4 className="text-center font-semibold text-white my-4">
+          <button className="bg-black px-10 py-2 rounded-lg">Next</button>
+        </h4>
+      </Link>
     </div>
   );
 };

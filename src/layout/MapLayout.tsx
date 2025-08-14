@@ -8,7 +8,6 @@ const MapLayout = () => {
       <div className="">
         <MapWithRoute />
       </div>
-
       <div className="px-3 content bg-white rounded-t-2xl">
         <Outlet />
       </div>
