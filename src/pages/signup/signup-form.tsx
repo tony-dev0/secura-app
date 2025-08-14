@@ -139,7 +139,7 @@ const SignupForm = () => {
           onClick={handleSubmit}
           className="w-full py-4 px-6 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors"
         >
-          Sign up
+          Sign up now
         </button>
       </div>
     </div>
