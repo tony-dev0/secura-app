@@ -50,7 +50,6 @@ const SignupForm = () => {
     });
 
     if (!phoneError && !termsError) {
-      // Proceed to verification
       window.location.href = "/verify";
     }
   };

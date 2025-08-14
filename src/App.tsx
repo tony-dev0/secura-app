@@ -4,6 +4,9 @@ import SignupRoutes from "./pages/signup";
 import RideHistory from "./pages/history/ride-history";
 import Account from "./pages/profile/account";
 import Emergency from "./pages/emergency/emergency";
+import ConfirmPin from "./pages/ride/confirm-pin";
+import HeadingToDestination from "./pages/ride/heading-to-destination";
+import TripCompleted from "./pages/ride/trip-completed";
 import Errorpage from "./pages/errorpage";
 
 function App() {
@@ -15,6 +18,9 @@ function App() {
         <Route path="/ride-history" element={<RideHistory />} />
         <Route path="/account" element={<Account />} />
         <Route path="/emergency" element={<Emergency />} />
+        <Route path="/confirm-pin" element={<ConfirmPin />} />
+        <Route path="/heading-to-destination" element={<HeadingToDestination />} />
+        <Route path="/trip-completed" element={<TripCompleted />} />
         <Route path="*" element={<Errorpage />} />
       </Routes>
     </BrowserRouter>
