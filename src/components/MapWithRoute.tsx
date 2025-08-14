@@ -166,10 +166,9 @@ const MapWithRoute = () => {
   }
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", height: "500px", width: "100%" }}>
       {/* Inject spinner keyframes */}
       <style>{spinnerKeyframes}</style>
-
       {!origin && <div style={spinnerStyle}></div>}
       {origin && (
         <MapContainer
