@@ -14,6 +14,7 @@ import Emergency from "./pages/emergency/emergency";
 import ConfirmPin from "./pages/ride/confirm-pin";
 import HeadingToDestination from "./pages/ride/heading-to-destination";
 import TripCompleted from "./pages/ride/trip-completed";
+import BecomeADriver from "./pages/driver/become-a-driver";
 import Errorpage from "./pages/errorpage";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/ride-history" element={<RideHistory />} />
         <Route path="/account" element={<Account />} />
         <Route path="/emergency" element={<Emergency />} />
+        <Route path="/become-a-driver" element={<BecomeADriver />} />
         <Route element={<MapLayout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/pickup-location" element={<PickupLocation />} />
