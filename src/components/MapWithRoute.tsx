@@ -26,7 +26,7 @@ import {
 } from "react-leaflet";
 import axios from "axios";
 import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+import "/src/assets/css/leaflet.css";
 import markerIcon2x from "/marker-icon-2x.png";
 import markerIcon from "/marker-icon.png";
 import markerShadow from "/marker-shadow.png";
@@ -105,32 +105,6 @@ const MapWithRoute = () => {
     }
   }, [origin, destination]);
 
-  // When user selects a suggestion, fetch its details
-  // const inputRef = useRef<HTMLInputElement | null>(null);
-  // const handleSuggestionClick = async (
-  //   placeId: string,
-  //   description: string
-  // ) => {
-  //   try {
-  //     setSuggestions([]); // Hide suggestions immediately
-  //     if (inputRef.current) inputRef.current.blur();
-  //     const res = await axios.get(
-  //       "https://maps.gomaps.pro/maps/api/place/details/json",
-  //       {
-  //         params: {
-  //           placeid: placeId,
-  //           key: gomapsApiKey,
-  //         },
-  //       }
-  //     );
-  //     const loc = res.data.result.geometry.location;
-  //     setDestination({ lat: loc.lat, lng: loc.lng });
-  //     setDestinationInput(description);
-  //   } catch (err) {
-  //     console.error("Error fetching place details:", err);
-  //   }
-  // };
-
   const fetchRoute = async () => {
     try {
       const res = await axios.get(
@@ -192,7 +166,7 @@ const MapWithRoute = () => {
   }
 
   return (
-    <div style={{ position: "relative", minHeight: "500px" }}>
+    <div style={{ position: "relative" }}>
       {/* Inject spinner keyframes */}
       <style>{spinnerKeyframes}</style>
 
@@ -201,7 +175,7 @@ const MapWithRoute = () => {
         <MapContainer
           center={origin}
           zoom={8}
-          style={{ height: "500px", width: "100%" }}
+          style={{ height: "100%", width: "100%" }}
           ref={mapRef}
         >
           <TileLayer

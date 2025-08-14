@@ -59,7 +59,7 @@ const RideHistory = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col max-w-[768px] mx-auto px-4 py-6">
       <div className="flex items-center mb-4">
-        <Link to="/" className="mr-4">
+        <Link to="/home" className="mr-4">
           <ArrowLeft className=" text-black" />
         </Link>
       </div>
