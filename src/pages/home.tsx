@@ -108,7 +108,7 @@ const Home = () => {
             onChange={(e) => {
               setDestinationInput(e.target.value);
             }}
-            style={{ width: "300px", padding: "5px" }}
+            style={{ width: "300px", padding: "10px" }}
           />
         </div>
         {suggestions.length > 0 && (
