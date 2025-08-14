@@ -24,7 +24,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="icon footer flex justify-around p-3 bg-[#eeeeee]">
+    <div className="icon footer flex justify-around p-3 bg-[#eeeeee] fixed w-full bottom-0">
       {navItems.map((item, index) => (
         <Link
           key={index}

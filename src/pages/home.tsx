@@ -141,7 +141,7 @@ const Home = () => {
         )}
       </div>
       <h6 className="text-gray-500 my-3">Frequent Destinations</h6>
-      <div className="flex items-center justify-around">
+      <div className="flex items-center justify-around mb-8">
         <div className="footer-nav text-sm font-semibold">Home</div>
         <div className="footer-nav text-sm font-semibold">Office</div>
         <div className="footer-nav text-sm font-semibold">Appartment</div>

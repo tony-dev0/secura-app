@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const DriverFound = () => {
   return (
     <div>
-      <h4 className="font-bold mb-3 mt-3 text-center">Driver Found</h4>
+      <h4 className="font-bold text-xl mb-3 mt-3 text-center">Driver Found</h4>
       <div className="my-10 flex justify-between">
         <div className="flex gap-3">
           <img src="/driver-img.png" alt="" />

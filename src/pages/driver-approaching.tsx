@@ -11,11 +11,11 @@ const DriverApproaching = () => {
   }, [navigate]);
   return (
     <div className="flex flex-col items-center justify-center h-full my-7">
-      <h4 className="font-bold mb-3 mt-3">
+      <h4 className="font-bold font-xl mb-3 mt-3">
         Driver is Heading to your location
       </h4>
-      <h5 className="text-sm mb-3">Red Toyota Camry 2008</h5>
-      <h6 className="text-xs mb-3">Driver will arrive in 5 mins...</h6>
+      <h5 className="text-md mb-3">Red Toyota Camry 2008</h5>
+      <h6 className="text-sm mb-3">Driver will arrive in 5 mins...</h6>
 
       <style>{`
         .ripple {

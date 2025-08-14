@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const PickupLocation = () => {
   return (
     <div>
-      <h4 className="font-bold mb-3 mt-3">Driver</h4>
+      <h4 className="font-bold text-xl mb-3 mt-3">Driver</h4>
       <div className="w-full flex justify-around bg-[#eeeeee] p-3 rounded-xl">
         <div className="driver flex flex-col items-center">
           <img src="/car.png" alt="Driver" className="w-4 h-4" />
