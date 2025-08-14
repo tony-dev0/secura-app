@@ -27,7 +27,7 @@ const ConfirmPin = () => {
   const isPinComplete = pin.every((digit) => digit !== "");
 
   return (
-    <div>
+    <div className="mt-7 mb-3">
       <div className="mb-6 text-center">
         <h3 className="font-extrabold text-xl">Driver is at your Location</h3>
         <p className="text-xs font-semibold text-[#4D4D4D]">

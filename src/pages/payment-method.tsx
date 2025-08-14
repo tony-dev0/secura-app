@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 
 const PaymentMethod = () => {
   return (
-    <div>
-      <h4 className="font-bold mb-3 mt-3 text-center">Choose Payment Method</h4>
+    <div className="mt-7 mb-3">
+      <h4 className="font-bold text-xl mb-3 mt-3 text-center">
+        Choose Payment Method
+      </h4>
       <div className="mt-3 mb-3">
         <div className="box bg-[#fbfbfb] py-2 px-3 my-3 flex gap-2 rounded-2xl active">
           <img src="cash.png" alt="" />

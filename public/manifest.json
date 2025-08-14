@@ -1,26 +1,31 @@
 {
   "name": "Secura App",
   "short_name": "Secura",
-  "description": "A secure web application.",
-  "start_url": ".",
+  "description": "Secura App - Secure, Fast, and Reliable Ride Experience.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#1976d2",
+  "theme_color": "#64D8B5",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "icons/icon-16x16.png",
-      "sizes": "512x512",
+      "src": "icons/icon-32x32.png",
+      "sizes": "32x32",
       "type": "image/png"
     },
     {
       "src": "icons/icon-96x96.png",
-      "sizes": "512x512",
+      "sizes": "96x96",
       "type": "image/png"
     },
     {
       "src": "icons/icon-192x192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

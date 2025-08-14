@@ -8,19 +8,21 @@ const Home = () => {
   const navigate = useNavigate();
   const [suggestions, setSuggestions] = useState<any[]>([]);
   const [destinationInput, setDestinationInput] = useState("");
+  const [hasSelectedSuggestion, setHasSelectedSuggestion] = useState(false);
   const gomapsApiKey = import.meta.env.VITE_GOMAPS_API_KEY;
   const dispatch = useDispatch();
-  // When user selects a suggestion, fetch its details
+
   const inputRef = useRef<HTMLInputElement | null>(null);
   const handleSuggestionClick = async (
     placeId: string,
     description: string
   ) => {
     try {
-      setSuggestions([]); // Hide suggestions immediately
-      // if (inputRef.current) {
-      //   inputRef.current.blur();
-      // }
+      setSuggestions([]);
+      setHasSelectedSuggestion(true);
+      if (inputRef.current) {
+        inputRef.current.blur();
+      }
 
       const res = await axios.get(
         "https://maps.gomaps.pro/maps/api/place/details/json",
@@ -32,12 +34,11 @@ const Home = () => {
         }
       );
       const loc = res.data.result.geometry.location;
-      // setDestination({ lat: loc.lat, lng: loc.lng }); // If you use this elsewhere, keep it
       setDestinationInput(description);
       dispatch(setDestination({ lat: loc.lat, lng: loc.lng }));
 
       const timer = setTimeout(() => {
-        navigate("/driver-found");
+        navigate("/pickup-location");
       }, 4000);
 
       return () => clearTimeout(timer);
@@ -49,6 +50,10 @@ const Home = () => {
   // Fetch autocomplete suggestions from GoMaps Pro Places API
   useEffect(() => {
     const fetchSuggestions = async () => {
+      if (hasSelectedSuggestion) {
+        setSuggestions([]);
+        return;
+      }
       if (destinationInput.length < 2) {
         setSuggestions([]);
         return;
@@ -86,11 +91,11 @@ const Home = () => {
       }
     };
     fetchSuggestions();
-  }, [destinationInput, gomapsApiKey]);
+  }, [destinationInput, gomapsApiKey, hasSelectedSuggestion]);
 
   return (
     <div className="home">
-      <h4 className="font-bold mb-3 mt-3">Where to?</h4>
+      <h4 className="font-bold mb-3 mt-5 text-xl">Where to?</h4>
       <div
         style={{ marginBottom: "10px", width: "320px", position: "relative" }}
       >
@@ -98,17 +103,17 @@ const Home = () => {
           <div className="location-img">
             <img src="/location.png" alt="" className="location" />
           </div>
-
           <input
             ref={inputRef}
             type="text"
             className="custom w-full"
             placeholder=""
             value={destinationInput}
-            onChange={(e) => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setDestinationInput(e.target.value);
+              setHasSelectedSuggestion(false);
             }}
-            style={{ width: "300px", padding: "5px" }}
+            style={{ width: "300px", padding: "10px" }}
           />
         </div>
         {suggestions.length > 0 && (

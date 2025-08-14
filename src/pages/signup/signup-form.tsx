@@ -55,7 +55,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col max-w-[768px] mx-auto px-4 py-6">
+    <div className="min-h-[75vh] bg-white flex flex-col max-w-[768px] mx-auto px-4 pt-6 pb-4">
       <div className="pb-6">
         <Link to="/" className="inline-block">
           <ArrowLeft />
@@ -126,7 +126,7 @@ const SignupForm = () => {
           <div className="flex-1 border-t border-gray-300"></div>
         </div>
 
-        <div className="mb-8">
+        <div className="mb-3">
           <button className="w-full h-fit py-4 px-6 border border-black/20 rounded-full flex items-center justify-center space-x-1 text-sm font-semibold">
             <img src="/icons/devicon_google.svg" alt="google icon" />
             <span className="">Continue with Google</span>
@@ -134,7 +134,7 @@ const SignupForm = () => {
         </div>
       </div>
 
-      <div className="pb-8">
+      <div className="pb-2">
         <button
           onClick={handleSubmit}
           className="w-full py-4 px-6 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors"

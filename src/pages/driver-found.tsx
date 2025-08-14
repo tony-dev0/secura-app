@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const DriverFound = () => {
   return (
-    <div>
-      <h4 className="font-bold mb-3 mt-3 text-center">Driver Found</h4>
+    <div className="mt-7">
+      <h4 className="font-bold text-xl mb-3 mt-3 text-center">Driver Found</h4>
       <div className="my-10 flex justify-between">
         <div className="flex gap-3">
           <img src="/driver-img.png" alt="" />
@@ -24,7 +24,7 @@ const DriverFound = () => {
         <img src="/material-symbols_call.png" alt="" />
       </div>
       <Link to={"/payment-method"}>
-        <h4 className="text-center font-semibold text-white my-4">
+        <h4 className="text-center font-semibold text-white mt-4">
           <button className="bg-black px-10 py-2 rounded-lg">Next</button>
         </h4>
       </Link>

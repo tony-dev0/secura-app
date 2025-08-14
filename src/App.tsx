@@ -16,10 +16,12 @@ import HeadingToDestination from "./pages/ride/heading-to-destination";
 import TripCompleted from "./pages/ride/trip-completed";
 import BecomeADriver from "./pages/driver/become-a-driver";
 import Errorpage from "./pages/errorpage";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <BrowserRouter>
+      <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
       <Routes>
         <Route path="/*" element={<SignupRoutes />} />
         <Route path="/ride-history" element={<RideHistory />} />
