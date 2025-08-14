@@ -20,6 +20,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/*" element={<SignupRoutes />} />
         <Route element={<MapLayout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/ride-history" element={<RideHistory />} />
@@ -38,8 +39,6 @@ function App() {
           <Route path="/payment-method" element={<PaymentMethod />} />
           <Route path="/pay-with-card" element={<PayWithCard />} />
         </Route>
-        <Route path="/*" element={<SignupRoutes />} />
-        <Route path="/home" element={<Home />} />
         <Route path="*" element={<Errorpage />} />
       </Routes>
     </BrowserRouter>

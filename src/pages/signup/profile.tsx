@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { ArrowLeft, ChevronDown } from "lucide-react";
@@ -100,6 +100,7 @@ const Profile = () => {
     if (!fullNameError && !emailError && !phoneError && !genderError) {
       // Handle signup completion logic here
       console.log("Signup completed:", formData);
+      window.location.href = "/home";
     }
   };
 
