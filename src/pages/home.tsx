@@ -8,6 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
   const [suggestions, setSuggestions] = useState<any[]>([]);
   const [destinationInput, setDestinationInput] = useState("");
+  const [hasSelectedSuggestion, setHasSelectedSuggestion] = useState(false);
   const gomapsApiKey = import.meta.env.VITE_GOMAPS_API_KEY;
   const dispatch = useDispatch();
 
@@ -18,6 +19,7 @@ const Home = () => {
   ) => {
     try {
       setSuggestions([]);
+      setHasSelectedSuggestion(true);
       if (inputRef.current) {
         inputRef.current.blur();
       }
@@ -48,6 +50,10 @@ const Home = () => {
   // Fetch autocomplete suggestions from GoMaps Pro Places API
   useEffect(() => {
     const fetchSuggestions = async () => {
+      if (hasSelectedSuggestion) {
+        setSuggestions([]);
+        return;
+      }
       if (destinationInput.length < 2) {
         setSuggestions([]);
         return;
@@ -85,7 +91,7 @@ const Home = () => {
       }
     };
     fetchSuggestions();
-  }, [destinationInput, gomapsApiKey]);
+  }, [destinationInput, gomapsApiKey, hasSelectedSuggestion]);
 
   return (
     <div className="home">
@@ -97,15 +103,15 @@ const Home = () => {
           <div className="location-img">
             <img src="/location.png" alt="" className="location" />
           </div>
-
           <input
             ref={inputRef}
             type="text"
             className="custom w-full"
             placeholder=""
             value={destinationInput}
-            onChange={(e) => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setDestinationInput(e.target.value);
+              setHasSelectedSuggestion(false);
             }}
             style={{ width: "300px", padding: "10px" }}
           />
@@ -140,7 +146,7 @@ const Home = () => {
         )}
       </div>
       <h6 className="text-gray-500 my-3">Frequent Destinations</h6>
-      <div className="flex items-center justify-around">
+      <div className="flex items-center justify-around mb-10">
         <div className="footer-nav text-sm font-semibold">Home</div>
         <div className="footer-nav text-sm font-semibold">Office</div>
         <div className="footer-nav text-sm font-semibold">Appartment</div>
