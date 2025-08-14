@@ -1,4 +1,14 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 const DriverApproaching = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/confirm-pin");
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [navigate]);
   return (
     <div className="flex flex-col items-center justify-center h-full my-7">
       <h4 className="font-bold mb-3 mt-3">
