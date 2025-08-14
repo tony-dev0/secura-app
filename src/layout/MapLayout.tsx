@@ -6,8 +6,7 @@ const MapLayout = () => {
   return (
     <div className="max-w-[450px] mx-auto">
       <div className="">
-        <div className="bg-gray-300 h-[100vh]"></div>
-        {/* <MapWithRoute gomapsApiKey={import.meta.env.VITE_GOMAPS_API_KEY} /> */}
+        <MapWithRoute />
       </div>
 
       <div className="px-3 content bg-white rounded-t-2xl">
