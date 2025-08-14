@@ -19,7 +19,7 @@ const PayWithCard = () => {
           </div>
         </div>
       </div>
-      <Link to={"/heading-approaching"}>
+      <Link to={"/driver-approaching"}>
         <h6 className="text-center my-6">
           <button className="bg-black text-white px-10 py-2 font-semibold rounded-lg">
             {" "}
