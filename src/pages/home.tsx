@@ -90,7 +90,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h4 className="font-bold mb-3 mt-3">Where to?</h4>
+      <h4 className="font-bold mb-3 mt-3 text-xl">Where to?</h4>
       <div
         style={{ marginBottom: "10px", width: "320px", position: "relative" }}
       >
@@ -141,7 +141,7 @@ const Home = () => {
         )}
       </div>
       <h6 className="text-gray-500 my-3">Frequent Destinations</h6>
-      <div className="flex items-center justify-around mb-8">
+      <div className="flex items-center justify-around mb-3">
         <div className="footer-nav text-sm font-semibold">Home</div>
         <div className="footer-nav text-sm font-semibold">Office</div>
         <div className="footer-nav text-sm font-semibold">Appartment</div>
