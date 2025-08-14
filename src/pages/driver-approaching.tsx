@@ -10,7 +10,7 @@ const DriverApproaching = () => {
     return () => clearTimeout(timer);
   }, [navigate]);
   return (
-    <div className="flex flex-col items-center justify-center h-full my-7">
+    <div className="flex flex-col items-center justify-center h-full mt-7 mb-3">
       <h4 className="font-bold font-xl mb-3 mt-3">
         Driver is Heading to your location
       </h4>

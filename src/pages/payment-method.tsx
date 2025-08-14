@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const PaymentMethod = () => {
   return (
-    <div>
+    <div className="mt-7 mb-3">
       <h4 className="font-bold text-xl mb-3 mt-3 text-center">
         Choose Payment Method
       </h4>

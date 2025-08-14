@@ -8,13 +8,13 @@ const TripCompleted = () => {
     setRating(starIndex + 1);
   };
   return (
-    <div>
+    <div className="mt-7 mb-3">
       <div className="text-center mb-6">
         <h1 className="text-2xl font-extrabold text-black mb-1">
           You have arrived
         </h1>
         <h2 className="text-base font-bold text-black mb-1">Gym House</h2>
-        <p className="text-[#4D4D4D] text-sm">12 Gym house Street, Lagos</p>
+        <p classNamb-5me="text-[#4D4D4D] text-sm">12 Gym house Street, Lagos</p>
       </div>
 
       <div className="flex justify-center gap-8 mb-8">

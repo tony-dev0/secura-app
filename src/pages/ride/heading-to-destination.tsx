@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const HeadingToDestination = () => {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="mt-7 mb-3">
       <div className="mb-6 text-center">
         <h1 className="text-2xl font-extrabold text-black mb-2">
           Heading to your Destination

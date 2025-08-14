@@ -37,7 +37,7 @@ const Home = () => {
       dispatch(setDestination({ lat: loc.lat, lng: loc.lng }));
 
       const timer = setTimeout(() => {
-        navigate("/driver-found");
+        navigate("/searching-ride");
       }, 7000);
 
       return () => clearTimeout(timer);
