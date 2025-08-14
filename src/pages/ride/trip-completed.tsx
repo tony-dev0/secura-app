@@ -69,13 +69,17 @@ const TripCompleted = () => {
           />
         ))}
       </div>
+      <div className="mb-8">
+        <button
+          className="w-full bg-[#64D8B5]/50 hover:bg-[#64D8B5]/70 text-black font-extrabold py-4 rounded-[48px] transition-colors"
+          onClick={handleReview}
+        >
+          Review Driver
+        </button>
+      </div>
 
-      <button
-        className="w-full bg-[#64D8B5]/50 hover:bg-[#64D8B5]/70 text-black font-extrabold py-4 rounded-[48px] transition-colors"
-        onClick={handleReview}
-      >
-        Review Driver
-      </button>
+      <br />
+      <br />
     </div>
   );
 };
