@@ -126,7 +126,7 @@ const SignupForm = () => {
           <div className="flex-1 border-t border-gray-300"></div>
         </div>
 
-        <div className="mb-8">
+        <div className="mb-5">
           <button className="w-full h-fit py-4 px-6 border border-black/20 rounded-full flex items-center justify-center space-x-1 text-sm font-semibold">
             <img src="/icons/devicon_google.svg" alt="google icon" />
             <span className="">Continue with Google</span>
