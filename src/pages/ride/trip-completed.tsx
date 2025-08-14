@@ -8,7 +8,7 @@ const TripCompleted = () => {
     setRating(starIndex + 1);
   };
   return (
-    <div className="mt-7 mb-10">
+    <div className="mt-7 mb-3">
       <div className="text-center mb-6">
         <h1 className="text-2xl font-extrabold text-black mb-1">
           You have arrived
@@ -57,10 +57,9 @@ const TripCompleted = () => {
         ))}
       </div>
 
-      <button className="mb-7 w-full bg-[#64D8B5]/50 hover:bg-[#64D8B5]/70 text-black font-extrabold py-4 rounded-[48px] transition-colors">
+      <button className="w-full bg-[#64D8B5]/50 hover:bg-[#64D8B5]/70 text-black font-extrabold py-4 rounded-[48px] transition-colors">
         Review Driver
       </button>
-      <br />
     </div>
   );
 };
