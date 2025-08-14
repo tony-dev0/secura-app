@@ -134,7 +134,7 @@ const SignupForm = () => {
         </div>
       </div>
 
-      <div className="pb-2 mt-[-60px]">
+      <div className="pb-2 mt-[-40px]">
         <button
           onClick={handleSubmit}
           className="w-full py-4 px-6 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors"
