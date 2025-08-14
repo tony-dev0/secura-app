@@ -55,7 +55,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="min-h-[90vh] bg-white flex flex-col max-w-[768px] mx-auto px-4 pt-6 pb-4">
+    <div className="min-h-[75vh] bg-white flex flex-col max-w-[768px] mx-auto px-4 pt-6 pb-4">
       <div className="pb-6">
         <Link to="/" className="inline-block">
           <ArrowLeft />
@@ -134,7 +134,7 @@ const SignupForm = () => {
         </div>
       </div>
 
-      <div className="pb-2 mt-[-20px]">
+      <div className="pb-2">
         <button
           onClick={handleSubmit}
           className="w-full py-4 px-6 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors"
