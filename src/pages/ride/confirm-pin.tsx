@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import MapPlaceholder from "./map-placeholder";
 import { useNavigate } from "react-router-dom";
 
 const ConfirmPin = () => {
