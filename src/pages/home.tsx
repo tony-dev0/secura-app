@@ -38,7 +38,7 @@ const Home = () => {
 
       const timer = setTimeout(() => {
         navigate("/driver-found");
-      }, 4000);
+      }, 7000);
 
       return () => clearTimeout(timer);
     } catch (err) {
