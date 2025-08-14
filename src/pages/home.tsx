@@ -89,7 +89,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h4 className="font-bold mb-3 mt-3 text-xl">Where to?</h4>
+      <h4 className="font-bold mb-3 mt-5 text-xl">Where to?</h4>
       <div
         style={{ marginBottom: "10px", width: "320px", position: "relative" }}
       >
