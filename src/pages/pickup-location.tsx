@@ -19,12 +19,9 @@ const PickupLocation = () => {
         </div>
       </div>
       <Link to={"/searching-ride"}>
-        <h6 className="text-center my-4">
-          <button className="bg-[#83E0C4] px-10 py-1 font-semibold rounded-lg">
-            {" "}
-            Next
-          </button>{" "}
-        </h6>
+        <h4 className="text-center font-semibold mt-5">
+          <button className="bg-[#83E0C4] px-10 py-2 rounded-lg">Next</button>
+        </h4>
       </Link>
     </div>
   );
