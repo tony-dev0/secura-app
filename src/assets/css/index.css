@@ -137,11 +137,13 @@ button {
 }
 
 .content {
-  z-index: 100000;
+  z-index: 10000;
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
 }
-
+.footer {
+  z-index: 100000;
+}
 .custom {
   padding: 10px;
   background: #ccc;

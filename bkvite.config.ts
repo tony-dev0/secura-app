@@ -47,16 +47,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,png,svg,ico,json}"],
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/maps\.gomaps\.pro\//,
-            handler: "NetworkFirst",
-            options: {
-              cacheName: "gomaps-api-cache",
-              expiration: { maxEntries: 50, maxAgeSeconds: 86400 },
-            },
-          },
-        ],
+        navigateFallback: "/offline.html",
       },
     }),
   ],
