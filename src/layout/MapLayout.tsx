@@ -4,7 +4,7 @@ import MapWithRoute from "../components/MapWithRoute";
 
 const MapLayout = () => {
   return (
-    <div className="max-w-[450px] mx-auto">
+    <div className="max-w-[768px] mx-auto">
       <div className="">
         <MapWithRoute />
       </div>
