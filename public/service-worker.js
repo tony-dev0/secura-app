@@ -1,7 +1,7 @@
-/*const CACHE_NAME = "secura-app-cache-v1";
+const CACHE_NAME = "secura-app-cache-v1";
 const urlsToCache = [
   "/",
-  "/index.html",
+  "index.html",
   "/offline.html",
   "/favicon.svg",
   "/icon.png",
@@ -41,4 +41,4 @@ self.addEventListener("fetch", (event) => {
       );
     })
   );
-}); */
+});
