@@ -10,17 +10,17 @@ const Home = () => {
   const [destinationInput, setDestinationInput] = useState("");
   const gomapsApiKey = import.meta.env.VITE_GOMAPS_API_KEY;
   const dispatch = useDispatch();
-  // When user selects a suggestion, fetch its details
+
   const inputRef = useRef<HTMLInputElement | null>(null);
   const handleSuggestionClick = async (
     placeId: string,
     description: string
   ) => {
     try {
-      setSuggestions([]); // Hide suggestions immediately
-      // if (inputRef.current) {
-      //   inputRef.current.blur();
-      // }
+      setSuggestions([]);
+      if (inputRef.current) {
+        inputRef.current.blur();
+      }
 
       const res = await axios.get(
         "https://maps.gomaps.pro/maps/api/place/details/json",
@@ -32,13 +32,12 @@ const Home = () => {
         }
       );
       const loc = res.data.result.geometry.location;
-      // setDestination({ lat: loc.lat, lng: loc.lng }); // If you use this elsewhere, keep it
       setDestinationInput(description);
       dispatch(setDestination({ lat: loc.lat, lng: loc.lng }));
 
       const timer = setTimeout(() => {
         navigate("/searching-ride");
-      }, 7000);
+      }, 4000);
 
       return () => clearTimeout(timer);
     } catch (err) {
@@ -141,7 +140,7 @@ const Home = () => {
         )}
       </div>
       <h6 className="text-gray-500 my-3">Frequent Destinations</h6>
-      <div className="flex items-center justify-around mb-3">
+      <div className="flex items-center justify-around">
         <div className="footer-nav text-sm font-semibold">Home</div>
         <div className="footer-nav text-sm font-semibold">Office</div>
         <div className="footer-nav text-sm font-semibold">Appartment</div>
