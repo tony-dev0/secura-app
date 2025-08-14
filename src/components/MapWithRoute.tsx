@@ -26,7 +26,7 @@ import {
 } from "react-leaflet";
 import axios from "axios";
 import L from "leaflet";
-import "/src/assets/css/leaflet.css";
+import "leaflet/dist/leaflet.css";
 import markerIcon2x from "/marker-icon-2x.png";
 import markerIcon from "/marker-icon.png";
 import markerShadow from "/marker-shadow.png";
