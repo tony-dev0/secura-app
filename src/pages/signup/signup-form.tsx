@@ -55,7 +55,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="min-h-[90vw] bg-white flex flex-col max-w-[768px] mx-auto px-4 pt-6 pb-4">
+    <div className="min-h-[90vh] bg-white flex flex-col max-w-[768px] mx-auto px-4 pt-6 pb-4">
       <div className="pb-6">
         <Link to="/" className="inline-block">
           <ArrowLeft />
