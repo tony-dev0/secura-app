@@ -21,11 +21,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/*" element={<SignupRoutes />} />
+        <Route path="/ride-history" element={<RideHistory />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/emergency" element={<Emergency />} />
         <Route element={<MapLayout />}>
           <Route path="/home" element={<Home />} />
-          <Route path="/ride-history" element={<RideHistory />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/emergency" element={<Emergency />} />
           <Route path="/pickup-location" element={<PickupLocation />} />
           <Route path="/searching-ride" element={<SearchingRide />} />
           <Route path="/driver-found" element={<DriverFound />} />
