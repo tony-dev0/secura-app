@@ -24,7 +24,7 @@ const DriverFound = () => {
         <img src="/material-symbols_call.png" alt="" />
       </div>
       <Link to={"/payment-method"}>
-        <h4 className="text-center font-semibold text-white my-4">
+        <h4 className="text-center font-semibold text-white mt-4">
           <button className="bg-black px-10 py-2 rounded-lg">Next</button>
         </h4>
       </Link>
