@@ -132,15 +132,14 @@ const SignupForm = () => {
             <span className="">Continue with Google</span>
           </button>
         </div>
-      </div>
-
-      <div className="pb-2">
-        <button
-          onClick={handleSubmit}
-          className="w-full py-4 px-6 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors"
-        >
-          Sign up
-        </button>
+        <div className="pb-2">
+          <button
+            onClick={handleSubmit}
+            className="w-full py-4 px-6 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors"
+          >
+            Sign up
+          </button>
+        </div>
       </div>
     </div>
   );
