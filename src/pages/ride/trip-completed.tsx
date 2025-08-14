@@ -8,7 +8,7 @@ const TripCompleted = () => {
     setRating(starIndex + 1);
   };
   return (
-    <div className="mt-7 mb-3">
+    <div className="mt-7 mb-10">
       <div className="text-center mb-6">
         <h1 className="text-2xl font-extrabold text-black mb-1">
           You have arrived
