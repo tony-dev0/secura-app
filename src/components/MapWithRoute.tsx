@@ -75,6 +75,23 @@ const MapWithRoute = () => {
     );
   }, []);
 
+  // Smooth zoom and pan to destination when it changes
+  useEffect(() => {
+    if (
+      destination &&
+      mapRef.current &&
+      typeof destination.lat === "number" &&
+      typeof destination.lng === "number"
+    ) {
+      // Animate map to destination with zoom
+      mapRef.current.flyTo([destination.lat, destination.lng], 16, {
+        animate: true,
+        duration: 1.5,
+        easeLinearity: 0.25,
+      });
+    }
+  }, [destination]);
+
   // Fetch route when both origin & destination are set
   useEffect(() => {
     if (

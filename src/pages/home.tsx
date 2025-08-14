@@ -2,8 +2,10 @@ import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setDestination } from "../store/destinationSlice";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [suggestions, setSuggestions] = useState<any[]>([]);
   const [destinationInput, setDestinationInput] = useState("");
   const gomapsApiKey = import.meta.env.VITE_GOMAPS_API_KEY;
@@ -16,7 +18,9 @@ const Home = () => {
   ) => {
     try {
       setSuggestions([]); // Hide suggestions immediately
-      if (inputRef.current) inputRef.current.blur();
+      // if (inputRef.current) {
+      //   inputRef.current.blur();
+      // }
 
       const res = await axios.get(
         "https://maps.gomaps.pro/maps/api/place/details/json",
@@ -31,6 +35,12 @@ const Home = () => {
       // setDestination({ lat: loc.lat, lng: loc.lng }); // If you use this elsewhere, keep it
       setDestinationInput(description);
       dispatch(setDestination({ lat: loc.lat, lng: loc.lng }));
+
+      const timer = setTimeout(() => {
+        navigate("/driver-found");
+      }, 4000);
+
+      return () => clearTimeout(timer);
     } catch (err) {
       console.error("Error fetching place details:", err);
     }
@@ -81,11 +91,14 @@ const Home = () => {
   return (
     <div className="home">
       <h4 className="font-bold mb-3 mt-3">Where to?</h4>
-      <div style={{ marginBottom: "10px", width: "320px" }}>
+      <div
+        style={{ marginBottom: "10px", width: "320px", position: "relative" }}
+      >
         <div className="location-container flex items-center">
           <div className="location-img">
             <img src="/location.png" alt="" className="location" />
           </div>
+
           <input
             ref={inputRef}
             type="text"
