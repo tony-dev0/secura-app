@@ -13,7 +13,7 @@ const BecomeADriver = () => {
 
       <div className="absolute top-0 left-0 right-0 h-[50vh] bg-gradient-to-b from-transparent via-[#FFFDFD]/51 to-[#FFFDFD] pointer-events-none"></div>
 
-      <div className="flex-1 bg-white px-6 py-8 flex flex-col justify-center relative z-10">
+      <div className="flex-1 bg-white px-6 pb-6 flex flex-col justify-center relative z-10">
         <div className="flex justify-center mb-8">
           <div className="flex flex-col items-center">
             <div className="w-13 h-13 ">
